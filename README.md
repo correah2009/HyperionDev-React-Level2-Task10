@@ -1,5 +1,6 @@
 ## Install on your local machine
-1. Fork repo https://github.com/correah2009/Task-React-VI
+1. Fork repo https://github.com/correah2009/HyperionDev-React-Level2-Task11
+
 2. In the folder, run 
 ###npm install
 
@@ -11,11 +12,26 @@
 
 ## Task User Stories
 
-Create a React app that:
+Create a React app with the following criteria:
 
-○ Contains a Dropdown that allows a user to select which functionality they want to use on your site. The options should be ‘Currency converter’ and ‘Win!’.
-
-○ Contains a component that converts currencies. This component should be displayed when the user selects ‘Currency converter’ from the Dropdown. The user should be able to enter a figure in dollars and the app should calculate and display the amount in South African Rands, UK pounds and Euros. The components that display the converted values should be children of the conversion component.
-BONUS (personal challenge): Developed feature to add more currency inputs to see multiple currency conversions.
-
-○ Contains a component that allows the user to play a simple game. This component should be displayed when the user selects ‘Win!’ from the Dropdown. The user should be shown three ‘Card’ components that they can click. When the user clicks on a ‘card’ the card should be ‘turned’ to reveal a message which either indicates that they’ve won a prize or that they’ve lost. They should only be able to pick one ‘card’ with each try. Once they’ve picked a ‘card’ they should no longer be able to click the ‘cards’ but should either be able to ‘Try again’ or ‘Quit’. The winning card should be different each time.
+1. It should be created using Create React App.
+2. It should include attractively styled components (at least 4 different types of
+components) that respond to user interaction. Feel free to use
+React-Bootstrap or another library and/or your own custom stylesheets.
+3. A number of components should be rendered using the array.Map() method. Each component rendered in this way should have a key that uniquely identifies it (see Task: React II).
+4. User interaction should modify the state of some components.
+5. The state of two or more components should be synced.
+6. The user should be able to restart the game.
+7. The user should be clearly informed if they have “won” or “lost” the game.
+8. (Optional)The user should easily be able to request “help” that will inform the user
+about the rules of the game from the UI.
+9. The UI should be attractive, easy to use and intuitive.
+10. It should include a file called “readMe.md” which explains the rules of the
+game. This file should also provide clear instructions that an end user will be
+able to follow to be able to install and run your app on their local machine.
+11. Your mentor should be able to launch your app by typing ‘npm start’ from
+the command line interface.
+12. The file structure of the project should be well organized in line with
+guidelines ​here​.
+13. Your code should be well documented with appropriate comments. The
+code should also be easy to read adhering to ​Google’s style guide about indentation, meaningful variable and component names etc.
