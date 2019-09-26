@@ -12,7 +12,12 @@
 
 ## Task User Stories
 
-Create a React app with the following criteria:
+
+Follow these steps:
+● Create Minesweeper or another game of your choice (not Tic-Tac-Toe) using the Create React App Starter Kit.
+● Ensure that the game adheres to the criteria listed below.
+
+Criteria: 
 
 1. It should be created using Create React App.
 2. It should include attractively styled components (at least 4 different types of
