@@ -2,10 +2,10 @@
 1. Fork repo https://github.com/correah2009/HyperionDev-React-Level2-Task11
 
 2. In the folder, run 
-###npm install
+### npm install
 
 3. Run 
-###npm start
+### npm start
 
 4. Enjoy
 
