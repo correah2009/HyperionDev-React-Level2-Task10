@@ -18,6 +18,7 @@ class Square extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this._colorSquare = this._colorSquare.bind(this);
   }
 
   handleClick() {
@@ -25,12 +26,22 @@ class Square extends React.Component {
     onClick(row, column, value, reveal);
   }
 
+  _colorSquare(value){
+    if(value === "mine"){
+      return `red`
+    } else{
+      return `rgb(${256 * Math.cos(value * 30) * Math.sin(value * 30)}, ${256 * Math.cos(value * 30)}, ${256 * Math.sin(value * 30)}`
+    }
+  }
+
   render() {
     const {row, column, value, reveal} = this.props;
     let content = (reveal===true)? value : "";
+
+    const backgroundColor = (reveal)? { ...squareStyle, backgroundColor: this._colorSquare(value) } : squareStyle;
     return (
       <button 
-        style={squareStyle}
+        style={backgroundColor}
         row={row} 
         column={column} 
         value={value}
@@ -49,9 +60,12 @@ const squareStyle = {
   border: "0.5px solid black",
   borderRadius: '3px',
   display: 'flex',
+  color: "white",
+  fontWeight: "700",
   justifyContent: 'center',
   alignItems : 'center',
 }
+
 
 export default class Minesweeper extends Component {
   constructor(props) {
@@ -255,6 +269,8 @@ export default class Minesweeper extends Component {
 
   render() {
     console.log("state", this.state);
+    const { header, container} = styles;
+
     let finish = "";
     if (this.state.gameover) {
       finish = this._renderFinish("Sorry, you lost.");
@@ -263,8 +279,11 @@ export default class Minesweeper extends Component {
     } 
 
     return (
-      <div>
+      <div style={container}>
+        <h1 style={header}>Minesweeper</h1>
+        <div>
         {this._renderBoard()}
+        </div>
         {finish}
       </div>
     )
@@ -273,4 +292,26 @@ export default class Minesweeper extends Component {
 
 const rowStyle = {
   display: 'flex',
+  margin: "0 auto",
+  justifyContent: "center"
+}
+
+const styles = {
+  container: {
+   margin: "0 auto",
+  },
+  header: {
+    color: "Brown",
+    padding: "20px"
+  },
+  square1: {
+    color: "purple",
+  },
+  square2: {
+    color: "blue",
+  },
+  square3: {
+    color: "green"
+  }
+
 }
