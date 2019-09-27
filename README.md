@@ -1,5 +1,5 @@
 ## Install on your local machine
-1. Fork repo https://github.com/correah2009/HyperionDev-React-Level2-Task11
+1. Fork repo https://github.com/correah2009/HyperionDev-React-Level2-Task10
 
 2. In the folder, run 
 ### npm install
