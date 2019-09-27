@@ -301,7 +301,7 @@ const styles = {
    margin: "0 auto",
   },
   header: {
-    color: "Brown",
+    color: "rgb(0, 0, 229)",
     padding: "20px"
   },
   square1: {
